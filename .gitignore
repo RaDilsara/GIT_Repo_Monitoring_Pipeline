@@ -1,0 +1,12 @@
+# Ignore secret environment variables
+.env
+
+# Ignore Terraform secrets and local state files
+terraform/terraform.tfvars
+terraform/.terraform/
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+
+# Ignore Python compiled files
+__pycache__/
+*.pyc

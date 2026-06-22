@@ -1,0 +1,349 @@
+[0m10:46:22.324544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77e447f634d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77e446abbed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77e446abb9d0>]}
+
+
+============================== 10:46:22.340334 | 7daa8bea-3010-480f-9dfe-c413e3885e32 ==============================
+[0m10:46:22.340334 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m10:46:22.341380 [debug] [MainThread]: running dbt with arguments {'log_path': '/home/ragitha/my-data-project/dbt/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'profiles_dir': '/home/ragitha/my-data-project/dbt', 'partial_parse': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'debug': 'False', 'maximum_seed_size_mib': '1', 'use_colors': 'True', 'target_path': 'None', 'version_check': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'empty': 'None', 'quiet': 'False', 'write_json': 'True', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'introspect': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'invocation_command': 'dbt debug'}
+[0m10:46:22.357690 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m10:46:22.358696 [info ] [MainThread]: python version: 3.13.5
+[0m10:46:22.360255 [info ] [MainThread]: python path: /home/ragitha/anaconda3/bin/python3.13
+[0m10:46:22.361103 [info ] [MainThread]: os info: Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+[0m10:46:22.459598 [info ] [MainThread]: Using profiles dir at /home/ragitha/my-data-project/dbt
+[0m10:46:22.460528 [info ] [MainThread]: Using profiles.yml file at /home/ragitha/my-data-project/dbt/profiles.yml
+[0m10:46:22.461374 [info ] [MainThread]: Using dbt_project.yml file at /home/ragitha/my-data-project/dbt/dbt_project.yml
+[0m10:46:22.462359 [info ] [MainThread]: adapter type: postgres
+[0m10:46:22.463108 [info ] [MainThread]: adapter version: 1.10.1
+[0m10:46:22.674806 [info ] [MainThread]: Configuration:
+[0m10:46:22.675574 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m10:46:22.676273 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m10:46:22.676960 [info ] [MainThread]: Required dependencies:
+[0m10:46:22.677651 [debug] [MainThread]: Executing "git --help"
+[0m10:46:22.690377 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m10:46:22.691205 [debug] [MainThread]: STDERR: "b''"
+[0m10:46:22.691802 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m10:46:22.692560 [info ] [MainThread]: Connection:
+[0m10:46:22.693422 [info ] [MainThread]:   host: localhost
+[0m10:46:22.694264 [info ] [MainThread]:   port: 5432
+[0m10:46:22.695100 [info ] [MainThread]:   user: airflow
+[0m10:46:22.695947 [info ] [MainThread]:   database: airflow
+[0m10:46:22.696793 [info ] [MainThread]:   schema: analytics
+[0m10:46:22.697661 [info ] [MainThread]:   connect_timeout: 10
+[0m10:46:22.698479 [info ] [MainThread]:   role: None
+[0m10:46:22.699332 [info ] [MainThread]:   search_path: None
+[0m10:46:22.700174 [info ] [MainThread]:   keepalives_idle: 0
+[0m10:46:22.701032 [info ] [MainThread]:   sslmode: None
+[0m10:46:22.701957 [info ] [MainThread]:   sslcert: None
+[0m10:46:22.702896 [info ] [MainThread]:   sslkey: None
+[0m10:46:22.703863 [info ] [MainThread]:   sslrootcert: None
+[0m10:46:22.704794 [info ] [MainThread]:   application_name: dbt
+[0m10:46:22.705703 [info ] [MainThread]:   retries: 1
+[0m10:46:22.706873 [info ] [MainThread]: Registered adapter: postgres=1.10.1
+[0m10:46:22.802986 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m10:46:22.856946 [debug] [MainThread]: Using postgres connection "debug"
+[0m10:46:22.857663 [debug] [MainThread]: On debug: select 1 as id
+[0m10:46:22.858239 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:46:22.877834 [debug] [MainThread]: SQL status: SELECT 1 in 0.020 seconds
+[0m10:46:22.879481 [debug] [MainThread]: On debug: Close
+[0m10:46:22.880154 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m10:46:22.880810 [info ] [MainThread]: [32mAll checks passed![0m
+[0m10:46:22.882862 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.7089111, "process_in_blocks": "26368", "process_kernel_time": 0.318821, "process_mem_max_rss": "126264", "process_out_blocks": "24", "process_user_time": 3.322719}
+[0m10:46:22.883773 [debug] [MainThread]: Command `dbt debug` succeeded at 10:46:22.883563 after 0.71 seconds
+[0m10:46:22.884377 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m10:46:22.885062 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77e445f8b100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77e444ff8050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x77e445face20>]}
+[0m10:46:22.885816 [debug] [MainThread]: Flushing usage events
+[0m10:46:23.980092 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:46:27.349425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6114b034d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61136b7ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61136b79d0>]}
+
+
+============================== 10:46:27.354645 | e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5 ==============================
+[0m10:46:27.354645 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m10:46:27.355647 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'invocation_command': 'dbt run', 'printer_width': '80', 'log_cache_events': 'False', 'profiles_dir': '/home/ragitha/my-data-project/dbt', 'log_path': '/home/ragitha/my-data-project/dbt/logs', 'empty': 'False', 'partial_parse': 'True', 'fail_fast': 'False', 'no_print': 'None', 'introspect': 'True', 'debug': 'False', 'maximum_seed_size_mib': '1', 'target_path': 'None', 'warn_error': 'None', 'cache_selected_only': 'False', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'quiet': 'False', 'static_parser': 'True', 'use_colors': 'True'}
+[0m10:46:27.743757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61147de3f0>]}
+[0m10:46:27.871081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6113631f20>]}
+[0m10:46:27.872855 [info ] [MainThread]: Registered adapter: postgres=1.10.1
+[0m10:46:28.018892 [debug] [MainThread]: checksum: 411bb0ec7902827339752848c8670ec3be261081c3156c05fb841700035c0ae5, vars: {}, profile: github_analytics, target: dev, version: 1.12.0b3
+[0m10:46:28.020193 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m10:46:28.020934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d611363b950>]}
+[0m10:46:29.954113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6114b074d0>]}
+[0m10:46:30.062802 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ragitha/my-data-project/dbt/target/manifest.json
+[0m10:46:30.067126 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ragitha/my-data-project/dbt/target/semantic_manifest.json
+[0m10:46:30.087570 [debug] [MainThread]: Wrote artifact OsiDocument to /home/ragitha/my-data-project/dbt/target/osi_document.json
+[0m10:46:30.109805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6111fdfe70>]}
+[0m10:46:30.110624 [info ] [MainThread]: Found 3 models, 475 macros
+[0m10:46:30.111336 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61123f8ef0>]}
+[0m10:46:30.114326 [info ] [MainThread]: 
+[0m10:46:30.115157 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m10:46:30.115872 [info ] [MainThread]: 
+[0m10:46:30.117085 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m10:46:30.126131 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m10:46:30.193248 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m10:46:30.193979 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m10:46:30.194573 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m10:46:30.214169 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.020 seconds
+[0m10:46:30.216504 [debug] [ThreadPool]: On list_airflow: Close
+[0m10:46:30.218783 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_analytics)
+[0m10:46:30.228339 [debug] [ThreadPool]: Using postgres connection "list_airflow_analytics"
+[0m10:46:30.229077 [debug] [ThreadPool]: On list_airflow_analytics: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "connection_name": "list_airflow_analytics"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'analytics'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'analytics'
+  
+[0m10:46:30.229760 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m10:46:30.250161 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.020 seconds
+[0m10:46:30.252283 [debug] [ThreadPool]: On list_airflow_analytics: ROLLBACK
+[0m10:46:30.253336 [debug] [ThreadPool]: On list_airflow_analytics: Close
+[0m10:46:30.260542 [debug] [MainThread]: Using postgres connection "master"
+[0m10:46:30.261426 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m10:46:30.262176 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m10:46:30.282774 [debug] [MainThread]: SQL status: SELECT 0 in 0.021 seconds
+[0m10:46:30.284881 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6111feaa50>]}
+[0m10:46:30.285710 [debug] [MainThread]: On master: ROLLBACK
+[0m10:46:30.286684 [debug] [MainThread]: On master: COMMIT
+[0m10:46:30.287355 [debug] [MainThread]: Using postgres connection "master"
+[0m10:46:30.287974 [debug] [MainThread]: On master: COMMIT
+[0m10:46:30.289254 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m10:46:30.289910 [debug] [MainThread]: On master: Close
+[0m10:46:30.305612 [debug] [Thread-1 (]: Began running node model.github_analytics.dim_repositories
+[0m10:46:30.306662 [info ] [Thread-1 (]: 1 of 3 START sql table model analytics.dim_repositories ........................ [RUN]
+[0m10:46:30.307660 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_analytics, now model.github_analytics.dim_repositories)
+[0m10:46:30.308398 [debug] [Thread-1 (]: Began compiling node model.github_analytics.dim_repositories
+[0m10:46:30.314571 [debug] [Thread-3 (]: Began running node model.github_analytics.fact_pull_requests
+[0m10:46:30.316058 [debug] [Thread-2 (]: Began running node model.github_analytics.dim_users
+[0m10:46:30.327754 [info ] [Thread-3 (]: 3 of 3 START sql table model analytics.fact_pull_requests ...................... [RUN]
+[0m10:46:30.335376 [debug] [Thread-1 (]: Writing injected SQL for node "model.github_analytics.dim_repositories"
+[0m10:46:30.337369 [info ] [Thread-2 (]: 2 of 3 START sql table model analytics.dim_users ............................... [RUN]
+[0m10:46:30.341667 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.github_analytics.dim_users'
+[0m10:46:30.343196 [debug] [Thread-2 (]: Began compiling node model.github_analytics.dim_users
+[0m10:46:30.339437 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.github_analytics.fact_pull_requests'
+[0m10:46:30.351245 [debug] [Thread-2 (]: Writing injected SQL for node "model.github_analytics.dim_users"
+[0m10:46:30.352750 [debug] [Thread-3 (]: Began compiling node model.github_analytics.fact_pull_requests
+[0m10:46:30.360484 [debug] [Thread-3 (]: Writing injected SQL for node "model.github_analytics.fact_pull_requests"
+[0m10:46:30.362013 [debug] [Thread-1 (]: Began executing node model.github_analytics.dim_repositories
+[0m10:46:30.368622 [debug] [Thread-2 (]: Began executing node model.github_analytics.dim_users
+[0m10:46:30.412522 [debug] [Thread-3 (]: Began executing node model.github_analytics.fact_pull_requests
+[0m10:46:30.623280 [debug] [Thread-3 (]: Writing runtime sql for node "model.github_analytics.fact_pull_requests"
+[0m10:46:30.633317 [debug] [Thread-2 (]: Writing runtime sql for node "model.github_analytics.dim_users"
+[0m10:46:30.635731 [debug] [Thread-1 (]: Writing runtime sql for node "model.github_analytics.dim_repositories"
+[0m10:46:30.638940 [debug] [Thread-1 (]: Using postgres connection "model.github_analytics.dim_repositories"
+[0m10:46:30.640928 [debug] [Thread-1 (]: On model.github_analytics.dim_repositories: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "node_id": "model.github_analytics.dim_repositories"} */
+
+  
+    
+
+  create  table "airflow"."analytics"."dim_repositories__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Extracts unique repository information from the nested JSON
+SELECT DISTINCT
+    CAST(raw_json->'base'->'repo'->>'id' AS BIGINT) AS repo_id,
+    CAST(raw_json->'base'->'repo'->>'full_name' AS VARCHAR) AS repo_name,
+    CAST(raw_json->'base'->'repo'->>'html_url' AS VARCHAR) AS repo_url,
+    CAST(raw_json->'base'->'repo'->>'description' AS TEXT) AS repo_description
+FROM raw_github_data.pull_requests
+WHERE raw_json->'base'->'repo'->>'id' IS NOT NULL
+  );
+  
+[0m10:46:30.642876 [debug] [Thread-3 (]: Using postgres connection "model.github_analytics.fact_pull_requests"
+[0m10:46:30.644510 [debug] [Thread-2 (]: Using postgres connection "model.github_analytics.dim_users"
+[0m10:46:30.646109 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m10:46:30.647972 [debug] [Thread-3 (]: On model.github_analytics.fact_pull_requests: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "node_id": "model.github_analytics.fact_pull_requests"} */
+
+  
+    
+
+  create  table "airflow"."analytics"."fact_pull_requests__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- The central fact table connecting the action to the dimensions
+SELECT
+    id AS pr_id,
+    number AS pr_number,
+    -- Foreign Keys linking to our Dimension tables
+    CAST(raw_json->'user'->>'id' AS BIGINT) AS user_id,
+    CAST(raw_json->'base'->'repo'->>'id' AS BIGINT) AS repo_id,
+    
+    -- PR specifics
+    title,
+    state,
+    created_at,
+    updated_at,
+    CAST(raw_json->>'closed_at' AS TIMESTAMP) AS closed_at,
+    CAST(raw_json->>'merged_at' AS TIMESTAMP) AS merged_at,
+    CAST(raw_json->>'draft' AS BOOLEAN) AS is_draft,
+    CAST(raw_json->>'locked' AS BOOLEAN) AS is_locked
+FROM raw_github_data.pull_requests
+  );
+  
+[0m10:46:30.649912 [debug] [Thread-2 (]: On model.github_analytics.dim_users: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "node_id": "model.github_analytics.dim_users"} */
+
+  
+    
+
+  create  table "airflow"."analytics"."dim_users__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Extracts unique user information from the nested JSON
+SELECT DISTINCT
+    CAST(raw_json->'user'->>'id' AS BIGINT) AS user_id,
+    user_login AS username,
+    CAST(raw_json->'user'->>'type' AS VARCHAR) AS user_type,
+    CAST(raw_json->'user'->>'site_admin' AS BOOLEAN) AS is_site_admin
+FROM raw_github_data.pull_requests
+WHERE raw_json->'user'->>'id' IS NOT NULL
+  );
+  
+[0m10:46:30.652637 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m10:46:30.654742 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m10:46:30.767733 [debug] [Thread-2 (]: SQL status: SELECT 25 in 0.113 seconds
+[0m10:46:30.804267 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.158 seconds
+[0m10:46:30.805941 [debug] [Thread-3 (]: SQL status: SELECT 100 in 0.153 seconds
+[0m10:46:30.824181 [debug] [Thread-1 (]: Using postgres connection "model.github_analytics.dim_repositories"
+[0m10:46:30.825937 [debug] [Thread-1 (]: On model.github_analytics.dim_repositories: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "node_id": "model.github_analytics.dim_repositories"} */
+alter table "airflow"."analytics"."dim_repositories__dbt_tmp" rename to "dim_repositories"
+[0m10:46:30.834258 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m10:46:30.836462 [debug] [Thread-3 (]: Using postgres connection "model.github_analytics.fact_pull_requests"
+[0m10:46:30.802829 [debug] [Thread-2 (]: Using postgres connection "model.github_analytics.dim_users"
+[0m10:46:30.843900 [debug] [Thread-3 (]: On model.github_analytics.fact_pull_requests: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "node_id": "model.github_analytics.fact_pull_requests"} */
+alter table "airflow"."analytics"."fact_pull_requests__dbt_tmp" rename to "fact_pull_requests"
+[0m10:46:30.845633 [debug] [Thread-2 (]: On model.github_analytics.dim_users: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "node_id": "model.github_analytics.dim_users"} */
+alter table "airflow"."analytics"."dim_users__dbt_tmp" rename to "dim_users"
+[0m10:46:30.867800 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m10:46:30.881138 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.006 seconds
+[0m10:46:30.979704 [debug] [Thread-2 (]: On model.github_analytics.dim_users: COMMIT
+[0m10:46:30.982746 [debug] [Thread-3 (]: On model.github_analytics.fact_pull_requests: COMMIT
+[0m10:46:30.984394 [debug] [Thread-2 (]: Using postgres connection "model.github_analytics.dim_users"
+[0m10:46:30.991445 [debug] [Thread-1 (]: On model.github_analytics.dim_repositories: COMMIT
+[0m10:46:30.993332 [debug] [Thread-3 (]: Using postgres connection "model.github_analytics.fact_pull_requests"
+[0m10:46:30.995040 [debug] [Thread-2 (]: On model.github_analytics.dim_users: COMMIT
+[0m10:46:30.996854 [debug] [Thread-1 (]: Using postgres connection "model.github_analytics.dim_repositories"
+[0m10:46:30.998606 [debug] [Thread-3 (]: On model.github_analytics.fact_pull_requests: COMMIT
+[0m10:46:31.000614 [debug] [Thread-1 (]: On model.github_analytics.dim_repositories: COMMIT
+[0m10:46:31.002454 [debug] [Thread-2 (]: SQL status: COMMIT in 0.002 seconds
+[0m10:46:31.010882 [debug] [Thread-3 (]: SQL status: COMMIT in 0.007 seconds
+[0m10:46:31.022968 [debug] [Thread-1 (]: SQL status: COMMIT in 0.018 seconds
+[0m10:46:31.056205 [debug] [Thread-2 (]: Applying DROP to: "airflow"."analytics"."dim_users__dbt_backup"
+[0m10:46:31.060695 [debug] [Thread-1 (]: Applying DROP to: "airflow"."analytics"."dim_repositories__dbt_backup"
+[0m10:46:31.049854 [debug] [Thread-3 (]: Applying DROP to: "airflow"."analytics"."fact_pull_requests__dbt_backup"
+[0m10:46:31.090898 [debug] [Thread-2 (]: Using postgres connection "model.github_analytics.dim_users"
+[0m10:46:31.102825 [debug] [Thread-2 (]: On model.github_analytics.dim_users: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "node_id": "model.github_analytics.dim_users"} */
+drop table if exists "airflow"."analytics"."dim_users__dbt_backup" cascade
+[0m10:46:31.099989 [debug] [Thread-3 (]: Using postgres connection "model.github_analytics.fact_pull_requests"
+[0m10:46:31.093793 [debug] [Thread-1 (]: Using postgres connection "model.github_analytics.dim_repositories"
+[0m10:46:31.107166 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m10:46:31.109669 [debug] [Thread-3 (]: On model.github_analytics.fact_pull_requests: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "node_id": "model.github_analytics.fact_pull_requests"} */
+drop table if exists "airflow"."analytics"."fact_pull_requests__dbt_backup" cascade
+[0m10:46:31.115784 [debug] [Thread-1 (]: On model.github_analytics.dim_repositories: /* {"app": "dbt", "dbt_version": "1.12.0b3", "profile_name": "github_analytics", "target_name": "dev", "node_id": "model.github_analytics.dim_repositories"} */
+drop table if exists "airflow"."analytics"."dim_repositories__dbt_backup" cascade
+[0m10:46:31.125986 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m10:46:31.142633 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.017 seconds
+[0m10:46:31.163871 [debug] [Thread-2 (]: On model.github_analytics.dim_users: Close
+[0m10:46:31.187168 [debug] [Thread-1 (]: On model.github_analytics.dim_repositories: Close
+[0m10:46:31.181409 [debug] [Thread-3 (]: On model.github_analytics.fact_pull_requests: Close
+[0m10:46:31.215878 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6111ff3490>]}
+[0m10:46:31.228545 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61147828f0>]}
+[0m10:46:31.231698 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e5ef5c28-d6b7-45d2-99ed-ee4df9e04af5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6107d2ca70>]}
+[0m10:46:31.223429 [info ] [Thread-2 (]: 2 of 3 OK created sql table model analytics.dim_users .......................... [[32mSELECT 25[0m in 0.85s]
+[0m10:46:31.249867 [debug] [Thread-2 (]: Finished running node model.github_analytics.dim_users
+[0m10:46:31.235440 [info ] [Thread-1 (]: 1 of 3 OK created sql table model analytics.dim_repositories ................... [[32mSELECT 1[0m in 0.90s]
+[0m10:46:31.242795 [info ] [Thread-3 (]: 3 of 3 OK created sql table model analytics.fact_pull_requests ................. [[32mSELECT 100[0m in 0.89s]
+[0m10:46:31.260085 [debug] [Thread-1 (]: Finished running node model.github_analytics.dim_repositories
+[0m10:46:31.273957 [debug] [Thread-3 (]: Finished running node model.github_analytics.fact_pull_requests
+[0m10:46:31.285743 [debug] [MainThread]: On master: COMMIT
+[0m10:46:31.287356 [debug] [MainThread]: Using postgres connection "master"
+[0m10:46:31.289983 [debug] [MainThread]: On master: COMMIT
+[0m10:46:31.291409 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m10:46:31.325707 [debug] [MainThread]: SQL status: COMMIT in 0.034 seconds
+[0m10:46:31.326814 [debug] [MainThread]: On master: Close
+[0m10:46:31.328378 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m10:46:31.332198 [debug] [MainThread]: Connection 'model.github_analytics.dim_repositories' was properly closed.
+[0m10:46:31.333096 [debug] [MainThread]: Connection 'model.github_analytics.fact_pull_requests' was properly closed.
+[0m10:46:31.334121 [debug] [MainThread]: Connection 'model.github_analytics.dim_users' was properly closed.
+[0m10:46:31.335331 [info ] [MainThread]: 
+[0m10:46:31.336748 [info ] [MainThread]: Finished running 3 table models in 0 hours 0 minutes and 1.22 seconds (1.22s).
+[0m10:46:31.340322 [debug] [MainThread]: Command end result
+[0m10:46:31.424992 [debug] [MainThread]: Wrote artifact WritableManifest to /home/ragitha/my-data-project/dbt/target/manifest.json
+[0m10:46:31.431074 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/ragitha/my-data-project/dbt/target/semantic_manifest.json
+[0m10:46:31.435675 [debug] [MainThread]: Wrote artifact OsiDocument to /home/ragitha/my-data-project/dbt/target/osi_document.json
+[0m10:46:31.448514 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/ragitha/my-data-project/dbt/target/run_results.json
+[0m10:46:31.449194 [info ] [MainThread]: 
+[0m10:46:31.449916 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m10:46:31.450597 [info ] [MainThread]: 
+[0m10:46:31.451341 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+[0m10:46:31.453093 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.2448306, "process_in_blocks": "264", "process_kernel_time": 0.345535, "process_mem_max_rss": "139900", "process_out_blocks": "3048", "process_user_time": 6.406923}
+[0m10:46:31.454041 [debug] [MainThread]: Command `dbt run` succeeded at 10:46:31.453852 after 4.25 seconds
+[0m10:46:31.454754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d61136e3230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d611797d240>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7d6112bb6510>]}
+[0m10:46:31.455454 [debug] [MainThread]: Flushing usage events
+[0m10:46:32.836550 [debug] [MainThread]: An error was encountered while trying to flush usage events

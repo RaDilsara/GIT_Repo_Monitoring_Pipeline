@@ -1,0 +1,13 @@
+github_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      # dbt will crash safely if the .env file isn't loaded
+      user: "{{ env_var('POSTGRES_USER') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      port: 5432
+      dbname: "{{ env_var('POSTGRES_DB') }}"
+      schema: analytics
+      threads: 4

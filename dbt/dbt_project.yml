@@ -1,0 +1,12 @@
+name: 'github_analytics'
+version: '1.0.0'
+config-version: 2
+profile: 'github_analytics'
+
+model-paths: ["models"]
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  github_analytics:
+    # This tells dbt to physically create tables in Postgres for everything in this project
+    +materialized: table
